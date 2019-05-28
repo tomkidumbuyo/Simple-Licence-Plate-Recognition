@@ -60,14 +60,23 @@ panelB.add(numberText)
 
 # tkinter table
 
-
-table = Table(tk, ["Driver name", "Licence Plate Number", "columna C"], column_minwidths=[None, None, None])
+userdata = [['Thomas Kidumbuyo', 'KT340LCFU', "Kinondoni"], ['Alex Atanas', 'HRQBDA23301', "Kinondoni"] ]
+table = Table(tk, ["Driver name", "Licence Plate Number", "Location"], column_minwidths=[200, 200, 200])
 table.pack(expand=True, fill=Tkinter.X,padx=10, pady=10)
 
 #table.on_change_data(scrolling_area.update_viewport)
 
+def popupmsg(msg):
+    popup = tk.Tk()
+    popup.wm_title("!")
+    label = Tkinter.Label(popup, text=msg, font=Tkinter.NORM_FONT)
+    label.pack(side="top", fill="x", pady=10)
+    B1 = Tkinter.Button(popup, text="Okay", command = popup.destroy)
+    B1.pack()
+    popup.mainloop()
+
 def updateTable():
-    table.set_data([['Thomas Kidumbuyo', 2, 3], ['Alex Atanas', 5, 6] ])
+    table.set_data(userdata)
 
 updateTable()
 
@@ -163,39 +172,8 @@ def prepare_switching():
     
 prepare_switching()
 
-def take_pictures():
-    
-    run_id = create_run(conn, [datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")])
-    print("run_id = "+str(run_id))
-    
-    count = 0
-    pictures = []
-    while  count < 5:
-        print("taking a picture")
-        imageName = "files/"+strftime("%Y-%m-%d,%H:%M:%S", gmtime())+"-"+str((count+1))+".jpg"
-        print(imageName)
-        os.system('fswebcam -r 1080x720 -S 5 --jpeg 50 --save '+imageName ) # uses Fswebcam to take picture
-        print("picture taken")
-        
-        picture = {
-            'location':imageName,
-            'number': None
-        }
-        pictures.append(picture)
-        count = count + 1
-        
-    for picture in pictures:
-        
-        print("location : "+picture['location'])
-        
-        picture['number'] = detect_number(picture['location'])
-        if picture['number'] is not None:
-            scan_id = create_scan(conn,[picture['location'],picture['number'],run_id])
-            print("scan id : "+str(scan_id))
-            print("number : "+picture['number'])
-
 def detect_number(imageName):
-    global streaming
+    global streaming,userdata
     streaming = False
     img = cv2.imread(imageName,cv2.IMREAD_COLOR)
 
@@ -274,6 +252,12 @@ def detect_number(imageName):
         
         numberText.configure(text=text)
         numberText.text = text
+
+        for user in userdata:
+            print(user)
+            print(user[1])
+            if user[1] == text:
+                popupmsg("This vehicle belongs to "+user[1]+" from "+user[2])
 
 
         
@@ -390,9 +374,7 @@ while True: # Run forever
     #     GPIO.output(40,GPIO.LOW)
 
     if not taking_picture and ((position_1 and green_trafic is not 1) or (position_2 and green_trafic is not 2) or (position_3 and green_trafic is not 3)):
-            taking_picture = True
-            pictures = take_pictures()
-            taking_picture = False
+        captureImage()
             
     tk.update_idletasks()
     tk.update()
