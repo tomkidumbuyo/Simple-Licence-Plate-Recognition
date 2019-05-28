@@ -67,7 +67,7 @@ table.pack(expand=True, fill=Tkinter.X,padx=10, pady=10)
 #table.on_change_data(scrolling_area.update_viewport)
 
 def popupmsg(msg):
-    popup = tk.Tk()
+    popup = Tkinter.Tk()
     popup.wm_title("!")
     label = Tkinter.Label(popup, text=msg, font=Tkinter.NORM_FONT)
     label.pack(side="top", fill="x", pady=10)
