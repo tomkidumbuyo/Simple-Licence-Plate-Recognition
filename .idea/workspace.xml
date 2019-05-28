@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9f4972d3-b8f0-4ca3-94bd-2d51f06c944e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/0.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,18:10:00-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,18:10:03-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,18:10:06-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,18:10:09-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,18:10:12-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,21:54:31-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,21:54:33-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,21:54:35-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,21:54:36-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,21:54:38-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,21:55:49-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,21:55:51-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,21:55:52-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,21:55:54-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,21:55:56-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,22:51:15-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,22:51:17-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,22:51:18-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,22:51:20-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,22:51:21-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,22:53:17-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,22:53:19-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,22:53:20-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,22:53:22-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,22:53:24-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,22:56:48-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,22:56:49-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,22:56:51-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,22:56:52-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,22:56:54-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:19:25-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:19:27-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:19:28-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:19:30-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:19:31-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:25:45-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:25:46-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:25:48-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:25:49-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:25:51-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:28:44-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:28:46-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:28:47-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:28:49-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:28:50-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:29:58-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:30:00-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:30:01-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:30:03-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:30:04-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:31:47-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:31:49-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:31:51-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:31:52-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:31:54-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:35:00-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:35:02-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:35:03-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:35:05-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:35:06-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:41:26-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:41:28-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:41:29-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:41:31-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:41:32-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:48:25-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:48:28-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:48:29-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:48:31-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:48:32-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:49:46-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:49:48-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:49:49-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:49:51-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:49:53-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:52:08-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:52:09-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:52:11-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:52:12-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:52:14-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:54:28-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:54:29-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:54:31-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:54:32-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:54:34-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:58:46-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:58:48-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:58:49-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:58:51-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-18,23:58:52-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:04:59-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:05:00-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:05:02-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:05:03-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:05:05-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:07:48-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:07:50-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:07:51-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:07:53-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:07:54-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:11:45-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:11:47-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:11:48-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:11:49-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:11:51-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:12:54-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:12:56-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:12:57-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:12:59-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:13:00-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:14:44-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:14:45-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:14:47-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:14:48-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:14:50-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:15:19-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:15:20-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:15:22-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:15:23-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:15:25-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:25:13-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:25:15-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:25:16-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:25:18-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:25:19-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:29:38-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:29:40-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:29:41-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:29:43-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,00:29:44-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,01:25:53-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,01:25:55-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,01:25:57-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,01:25:58-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,01:26:00-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,01:29:26-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,01:29:28-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,01:29:29-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,01:29:31-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,01:29:32-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,01:29:44-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,01:29:46-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,01:29:47-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,01:29:49-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,01:29:50-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,01:30:58-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,01:31:00-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,01:31:01-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,01:31:03-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,01:31:04-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,01:32:24-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,01:32:25-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,01:32:27-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,01:32:28-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,01:32:30-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,01:34:55-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,01:34:57-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,01:34:58-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,01:35:00-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,01:35:01-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,01:46:54-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,01:46:56-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,01:46:57-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,01:46:59-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,01:47:00-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:11:43-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:11:45-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:11:46-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:11:48-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:11:49-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:14:11-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:14:12-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:14:14-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:14:15-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:14:17-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:16:09-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:16:11-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:16:12-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:16:14-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:16:15-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:16:49-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:16:50-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:16:52-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:16:53-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:16:55-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:50:54-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:50:56-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:50:57-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:50:58-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:51:00-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:52:32-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:52:34-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:52:35-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:52:37-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:52:38-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:55:08-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:55:10-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:55:11-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:55:13-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:55:14-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:56:16-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:56:18-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:56:20-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:56:21-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,02:56:23-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:00:37-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:00:39-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:00:40-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:00:42-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:00:43-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:01:52-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:01:55-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:01:56-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:01:58-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:01:59-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:02:25-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:02:27-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:02:28-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:02:30-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:02:32-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:06:41-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:06:43-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:06:44-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:06:46-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:06:48-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:07:17-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:07:19-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:07:20-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:07:22-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:07:23-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:08:13-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:08:15-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:08:17-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:08:18-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:08:20-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:08:52-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:08:54-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:08:56-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:08:57-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:08:59-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:09:35-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:09:37-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:09:38-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:09:40-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:09:41-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:10:03-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:10:04-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:10:06-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:10:07-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,03:10:09-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,07:18:04-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,07:18:06-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,07:18:08-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,07:18:09-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,07:18:11-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,07:20:42-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,07:20:43-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,07:20:45-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,07:20:46-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,07:20:48-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,07:34:38.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,07:35:32.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,07:35:45.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,07:36:05.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,12:28:39-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,12:28:41-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,12:28:42-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,12:28:44-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,12:28:45-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,13:21:46.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,13:22:28.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,13:23:19-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,13:23:21-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,13:23:23-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,13:23:24-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,13:23:26-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,13:24:44-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,13:24:45-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,13:24:47-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,13:24:49-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/2019-05-19,13:24:51-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_i_dilate.png" beforeDir="false" afterPath="$PROJECT_DIR$/output_i_dilate.png" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="104">
+              <caret line="64" column="55" selection-start-line="64" selection-start-column="55" selection-end-line="64" selection-end-column="55" />
+              <folding>
+                <element signature="e#60#69#0" expanded="true" />
+                <element signature="e#2534#2694#0" />
+                <element signature="e#2797#3000#0" />
+                <element signature="e#3057#4076#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tkinterTable.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="565" column="26" selection-start-line="565" selection-start-column="15" selection-end-line="565" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scrolling_area.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2401" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/camera.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="18" selection-start-line="7" selection-end-line="7" selection-end-column="67" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>update</find>
+      <find>updateT</find>
+      <find>column</find>
+      <find>Table(</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/video.py" />
+        <option value="$PROJECT_DIR$/imageDetection.py" />
+        <option value="$PROJECT_DIR$/licenceDetector.py" />
+        <option value="$PROJECT_DIR$/LicensePlateDetector.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/tkinterTable.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1320" />
+    <option name="y" value="48" />
+    <option name="width" value="1382" />
+    <option name="height" value="754" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="LPR" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LPR" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="LPR" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9f4972d3-b8f0-4ca3-94bd-2d51f06c944e" name="Default Changelist" comment="" />
+      <created>1558387846486</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1558387846486</updated>
+      <workItem from="1558387855046" duration="1033000" />
+      <workItem from="1558389409497" duration="4576000" />
+      <workItem from="1558450650250" duration="1377000" />
+      <workItem from="1558519209259" duration="13100000" />
+      <workItem from="1558724435915" duration="1852000" />
+      <workItem from="1558781542560" duration="1947000" />
+      <workItem from="1558795159892" duration="7492000" />
+      <workItem from="1558818482083" duration="1078000" />
+      <workItem from="1558821039815" duration="3499000" />
+      <workItem from="1558827224744" duration="6743000" />
+      <workItem from="1558989449779" duration="10092000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="10720000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1358" y="-66" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28895614" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32943144" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32943144" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" x="0" y="0" width="295" height="554" id="Documentation" order="5" side_tool="true" weight="0.32980332" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2806354" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" visible="true" weight="0.32943144" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32943144" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" x="0" y="0" width="295" height="554" id="Documentation" order="5" side_tool="true" visible="true" weight="0.32980332" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>203</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/camera.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="18" selection-start-line="7" selection-end-line="7" selection-end-column="67" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrolling_area.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2401" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tkinterTable.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="565" column="26" selection-start-line="565" selection-start-column="15" selection-end-line="565" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="64" column="55" selection-start-line="64" selection-start-column="55" selection-end-line="64" selection-end-column="55" />
+          <folding>
+            <element signature="e#60#69#0" expanded="true" />
+            <element signature="e#2534#2694#0" />
+            <element signature="e#2797#3000#0" />
+            <element signature="e#3057#4076#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

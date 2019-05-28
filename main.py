@@ -1,7 +1,10 @@
-import RPi.GPIO as GPIO # Import Raspberry Pi GPIO library
+#import RPi.GPIO as GPIO # Import Raspberry Pi GPIO library
+import re
 import time
 import signal
 import sys
+from builtins import range
+
 from helpers import *
 import cv2
 import imutils
@@ -11,12 +14,20 @@ from db import *
 import datetime
 import os
 from time import gmtime, strftime
-import Tkinter
-import tkFileDialog
+
+from tkinterTable import Table
+
+try:
+    import Tkinter
+    import tkFileDialog
+except:
+    import tkinter as Tkinter
+    import tkinter.filedialog as tkFileDialog
+
 import PIL
 from PIL import Image 
 from PIL import ImageTk
-
+from scrolling_area import Scrolling_Area
 
 
  
@@ -41,12 +52,24 @@ mainPanel.add(panelB)
 mainImage = Tkinter.Label(panelA, image=None)
 panelA.add(mainImage)
 
-numberImage = Tkinter.Label(panelB, image=None,height=70)
+numberImage = Tkinter.Label(panelB, image=None,height=10)
 panelB.add(numberImage)
 
-numberText = Tkinter.Label(panelB, text="No number selected")
+numberText = Tkinter.Label(panelB, text="Streaming")
 panelB.add(numberText)
 
+# tkinter table
+
+
+table = Table(tk, ["Driver name", "Licence Plate Number", "columna C"], column_minwidths=[None, None, None])
+table.pack(expand=True, fill=Tkinter.X,padx=10, pady=10)
+
+#table.on_change_data(scrolling_area.update_viewport)
+
+def updateTable():
+    table.set_data([['Thomas Kidumbuyo', 2, 3], ['Alex Atanas', 5, 6] ])
+
+updateTable()
 
 def loadImage():
    file = tkFileDialog.askopenfile(title='Choose a file')
@@ -55,35 +78,55 @@ def loadImage():
        detect_number(file.name)
 
 #B = Tkinter.Button(panelB, text ="load image", command = loadImage,height=20)
-B = Tkinter.Button(panelB, text ="load image", command = loadImage)
+B = Tkinter.Button(panelB, text ="Load Local image", command = loadImage,height=5)
 panelB.add(B)
+
+streaming = True
+capture = False
+
+def captureImage():
+    global streaming,capture
+    if streaming == True:
+        streaming = False
+        capture = True
+        C.configure(text="Keep streaming")
+    else:
+        streaming = True
+        C.configure(text="Capture Image")
+        numberText.configure(text="Streaming")
+        numberText.text = "Streaming"
+        numberImage.configure(image=None)
+        numberImage.image = None
+
+C = Tkinter.Button(panelB, text ="Capture Image", command = captureImage,height=5)
+panelB.add(C)
 
 
 
 # Code to add widgets will go here...
 #top.mainloop()
 
-GPIO.setwarnings(False) # Ignore warning for now
-GPIO.setmode(GPIO.BOARD) # Use physical pin numbering
-
-GPIO.setup(8, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) # Set pin 8 to be an input pin and set initial value to be pulled low (off)
-GPIO.setup(10, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) # Set pin 10 to be an input pin and set initial value to be pulled low (off)
-GPIO.setup(12, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) # Set pin 12 to be an input pin and set initial value to be pulled low (off)
-
-# trafic light junction 1
-GPIO.setup(29,GPIO.OUT) #GREEN
-GPIO.setup(31,GPIO.OUT) #YELLOW
-GPIO.setup(33,GPIO.OUT) #RED
-
-# trafic light junction 2
-GPIO.setup(35,GPIO.OUT) #GREEN
-GPIO.setup(37,GPIO.OUT) #YELLOW
-GPIO.setup(32,GPIO.OUT) #RED
-
-# trafic light junction 3
-GPIO.setup(36,GPIO.OUT) #GREEN
-GPIO.setup(38,GPIO.OUT) #YELLOW
-GPIO.setup(40,GPIO.OUT) #RED
+# GPIO.setwarnings(False) # Ignore warning for now
+# GPIO.setmode(GPIO.BOARD) # Use physical pin numbering
+#
+# GPIO.setup(8, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) # Set pin 8 to be an input pin and set initial value to be pulled low (off)
+# GPIO.setup(10, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) # Set pin 10 to be an input pin and set initial value to be pulled low (off)
+# GPIO.setup(12, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) # Set pin 12 to be an input pin and set initial value to be pulled low (off)
+#
+# # trafic light junction 1
+# GPIO.setup(29,GPIO.OUT) #GREEN
+# GPIO.setup(31,GPIO.OUT) #YELLOW
+# GPIO.setup(33,GPIO.OUT) #RED
+#
+# # trafic light junction 2
+# GPIO.setup(35,GPIO.OUT) #GREEN
+# GPIO.setup(37,GPIO.OUT) #YELLOW
+# GPIO.setup(32,GPIO.OUT) #RED
+#
+# # trafic light junction 3
+# GPIO.setup(36,GPIO.OUT) #GREEN
+# GPIO.setup(38,GPIO.OUT) #YELLOW
+# GPIO.setup(40,GPIO.OUT) #RED
 
 green_trafic = 1
 yellow_trafic = 0
@@ -94,9 +137,6 @@ position_2  = False
 position_3  = False
 
 taking_picture = False
-
-
-
 
 # delay 5 seconds to start the green after the yellow light
 @delay(5)
@@ -153,11 +193,10 @@ def take_pictures():
             scan_id = create_scan(conn,[picture['location'],picture['number'],run_id])
             print("scan id : "+str(scan_id))
             print("number : "+picture['number'])
-        
-
-    
 
 def detect_number(imageName):
+    global streaming
+    streaming = False
     img = cv2.imread(imageName,cv2.IMREAD_COLOR)
 
     img = cv2.resize(img, (620,480) )
@@ -190,8 +229,8 @@ def detect_number(imageName):
         print("No contour detected")
         numberText.configure(text="number not detected")
         numberText.text = "number not detected"
-        numberImage.configure(image=imgctk)
-        numberImage.image = imgctk
+        numberImage.configure(image=None)
+        numberImage.image = None
     else:
         detected = 1
 
@@ -219,16 +258,15 @@ def detect_number(imageName):
         tessdata_dir_config = '--tessdata-dir "D:\Program Files\Tesseract-ocr\" --psm 10'
     
         result = pytesseract.image_to_string(Image.fromarray(img2), config='--psm 10')
-        print(result)
+        result = re.sub(r'[^\w]', '', result)
+        print("Detected Result is:"+result)
         
         #Read the number plate
         text = pytesseract.image_to_string(Cropped, config='--psm 11')
+        text = re.sub(r'[^\w]', '', text )
         print("Detected Number is:",text)
 
-        #cv2.imshow('image',img)
-        #cv2.imshow('Cropped',Cropped)
-        
-        
+
         imc = Image.fromarray(Cropped)
         imgctk = ImageTk.PhotoImage(image=imc) 
         numberImage.configure(image=imgctk)
@@ -237,12 +275,8 @@ def detect_number(imageName):
         numberText.configure(text=text)
         numberText.text = text
 
-        #cv2.waitKey(25)
-        #cv2.destroyAllWindows()
-        print("Detected Number is:",text)
-    
+
         
-    #cv2.imshow('new image',img)
     # Convert the Image object into a TkPhoto object
     im = Image.fromarray(img)
     imgtk = ImageTk.PhotoImage(image=im)
@@ -250,93 +284,110 @@ def detect_number(imageName):
     mainImage.image = imgtk
     
     if detected == 1:
-    	return text 
+    	return result
     else:
     	return None
 
-
-loadImage()
+livecam = cv2.VideoCapture(0)
 
 while True: # Run forever
+
+    ret,frame = livecam.read()
+
+    if streaming :
+        image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        image = Image.fromarray(image)
+        imagetk = ImageTk.PhotoImage(image=image)
+        mainImage.configure(image=imagetk)
+        mainImage.image = imagetk
+
+    if capture :
+        capture = False
+        imageName = r"files/" + strftime("%Y%m%d%H%M%S", gmtime()) + ".jpg"
+        cv2.imwrite(imageName, frame)  # save frame as JPEG file
+        print(imageName)
+        detect_number(imageName)
+
+
     #if not interval_started :
-    if GPIO.input(8) == GPIO.HIGH:
-        if position_1 == False:
-                print("car passed on junction 1")
-                position_1 = True
-                GPIO.output(31,GPIO.HIGH)
-    else:
-        position_1 = False
-        
-    if GPIO.input(10) == GPIO.HIGH:
-        if position_2 == False:
-                print("car passed on junction 2")
-                position_2 = True
-                GPIO.output(37,GPIO.HIGH)
-    else:
-        position_2 = False
-        
-    if GPIO.input(12) == GPIO.HIGH:
-        if position_3 == False:
-                print("car passed on junction 3")
-                position_3 = True
-                GPIO.output(38,GPIO.HIGH)
-    else:
-        position_3 = False
-        
-    if green_trafic is 1:
-        
-        GPIO.output(29,GPIO.HIGH)
-        GPIO.output(31,GPIO.LOW)
-        GPIO.output(33,GPIO.LOW)
-        
-        GPIO.output(35,GPIO.LOW)
-        GPIO.output(37,GPIO.LOW)
-        GPIO.output(32,GPIO.HIGH)
-        
-        GPIO.output(36,GPIO.LOW)
-        GPIO.output(38,GPIO.LOW)
-        GPIO.output(40,GPIO.HIGH)
-        
-    elif green_trafic is 2:
-        
-        GPIO.output(29,GPIO.LOW)
-        GPIO.output(31,GPIO.LOW)
-        GPIO.output(33,GPIO.HIGH)
-        
-        GPIO.output(35,GPIO.HIGH)
-        GPIO.output(37,GPIO.LOW)
-        GPIO.output(32,GPIO.LOW)
-        
-        GPIO.output(36,GPIO.LOW)
-        GPIO.output(38,GPIO.LOW)
-        GPIO.output(40,GPIO.HIGH)
-        
-    elif green_trafic is 3:
-        
-        GPIO.output(29,GPIO.LOW)
-        GPIO.output(31,GPIO.LOW)
-        GPIO.output(33,GPIO.HIGH)
-        
-        GPIO.output(35,GPIO.LOW)
-        GPIO.output(37,GPIO.LOW)
-        GPIO.output(32,GPIO.HIGH)
-        
-        GPIO.output(36,GPIO.HIGH)
-        GPIO.output(38,GPIO.LOW)
-        GPIO.output(40,GPIO.LOW)
-        
-    if yellow_trafic is 1:
-        GPIO.output(29,GPIO.LOW)
-        GPIO.output(31,GPIO.HIGH)
-        GPIO.output(33,GPIO.LOW)
-    elif yellow_trafic is 2:    
-        GPIO.output(35,GPIO.LOW)
-        GPIO.output(37,GPIO.HIGH)
-        GPIO.output(32,GPIO.LOW)
-    elif yellow_trafic is 3:    
-        GPIO.output(36,GPIO.LOW)
-        GPIO.output(38,GPIO.HIGH)
-        GPIO.output(40,GPIO.LOW)
+    # if GPIO.input(8) == GPIO.HIGH:
+    #     if position_1 == False:
+    #             print("car passed on junction 1")
+    #             position_1 = True
+    #             GPIO.output(31,GPIO.HIGH)
+    # else:
+    #     position_1 = False
+    #
+    # if GPIO.input(10) == GPIO.HIGH:
+    #     if position_2 == False:
+    #             print("car passed on junction 2")
+    #             position_2 = True
+    #             GPIO.output(37,GPIO.HIGH)
+    # else:
+    #     position_2 = False
+    #
+    # if GPIO.input(12) == GPIO.HIGH:
+    #     if position_3 == False:
+    #             print("car passed on junction 3")
+    #             position_3 = True
+    #             GPIO.output(38,GPIO.HIGH)
+    # else:
+    #     position_3 = False
+    #
+    # if green_trafic is 1:
+    #
+    #     GPIO.output(29,GPIO.HIGH)
+    #     GPIO.output(31,GPIO.LOW)
+    #     GPIO.output(33,GPIO.LOW)
+    #
+    #     GPIO.output(35,GPIO.LOW)
+    #     GPIO.output(37,GPIO.LOW)
+    #     GPIO.output(32,GPIO.HIGH)
+    #
+    #     GPIO.output(36,GPIO.LOW)
+    #     GPIO.output(38,GPIO.LOW)
+    #     GPIO.output(40,GPIO.HIGH)
+    #
+    # elif green_trafic is 2:
+    #
+    #     GPIO.output(29,GPIO.LOW)
+    #     GPIO.output(31,GPIO.LOW)
+    #     GPIO.output(33,GPIO.HIGH)
+    #
+    #     GPIO.output(35,GPIO.HIGH)
+    #     GPIO.output(37,GPIO.LOW)
+    #     GPIO.output(32,GPIO.LOW)
+    #
+    #     GPIO.output(36,GPIO.LOW)
+    #     GPIO.output(38,GPIO.LOW)
+    #     GPIO.output(40,GPIO.HIGH)
+    #
+    # elif green_trafic is 3:
+    #
+    #     GPIO.output(29,GPIO.LOW)
+    #     GPIO.output(31,GPIO.LOW)
+    #     GPIO.output(33,GPIO.HIGH)
+    #
+    #     GPIO.output(35,GPIO.LOW)
+    #     GPIO.output(37,GPIO.LOW)
+    #     GPIO.output(32,GPIO.HIGH)
+    #
+    #     GPIO.output(36,GPIO.HIGH)
+    #     GPIO.output(38,GPIO.LOW)
+    #     GPIO.output(40,GPIO.LOW)
+    #
+    # if yellow_trafic is 1:
+    #     GPIO.output(29,GPIO.LOW)
+    #     GPIO.output(31,GPIO.HIGH)
+    #     GPIO.output(33,GPIO.LOW)
+    # elif yellow_trafic is 2:
+    #     GPIO.output(35,GPIO.LOW)
+    #     GPIO.output(37,GPIO.HIGH)
+    #     GPIO.output(32,GPIO.LOW)
+    # elif yellow_trafic is 3:
+    #     GPIO.output(36,GPIO.LOW)
+    #     GPIO.output(38,GPIO.HIGH)
+    #     GPIO.output(40,GPIO.LOW)
 
     if not taking_picture and ((position_1 and green_trafic is not 1) or (position_2 and green_trafic is not 2) or (position_3 and green_trafic is not 3)):
             taking_picture = True
