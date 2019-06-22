@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9f4972d3-b8f0-4ca3-94bd-2d51f06c944e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lpr.sqlite3" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -12,27 +13,28 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3655">
-              <caret line="257" column="24" selection-start-line="257" selection-start-column="24" selection-end-line="257" selection-end-column="24" />
+            <state relative-caret-position="323">
+              <caret line="359" column="23" selection-start-line="359" selection-start-column="23" selection-end-line="359" selection-end-column="23" />
               <folding>
                 <element signature="e#60#69#0" expanded="true" />
-                <element signature="e#1575#1974#0" />
-                <element signature="e#2534#2694#0" />
-                <element signature="e#2797#3000#0" />
-                <element signature="e#7318#9866#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../OpenCV_3_KNN_Character_Recognition_Python-master/GenData.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tkinterTable.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
+            <state relative-caret-position="3927">
               <caret line="231" column="17" selection-start-line="231" selection-start-column="6" selection-end-line="231" selection-end-column="17" />
             </state>
           </provider>
@@ -40,15 +42,13 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scrolling_area.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2401" />
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/camera.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
+            <state relative-caret-position="85">
               <caret line="7" column="18" selection-start-line="7" selection-end-line="7" selection-end-column="67" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
@@ -109,6 +109,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -120,11 +121,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -183,17 +184,28 @@
       <workItem from="1558821039815" duration="3499000" />
       <workItem from="1558827224744" duration="6743000" />
       <workItem from="1558989449779" duration="13422000" />
+      <workItem from="1559006683736" duration="142000" />
+      <workItem from="1559080305442" duration="572000" />
+      <workItem from="1559181470078" duration="592000" />
+      <workItem from="1559424265819" duration="340000" />
+      <workItem from="1559595531841" duration="1196000" />
+      <workItem from="1560035592673" duration="599000" />
+      <workItem from="1560407092476" duration="542000" />
+      <workItem from="1561026343108" duration="78000" />
+      <workItem from="1561144711480" duration="1321000" />
+      <workItem from="1561147873499" duration="6187000" />
+      <workItem from="1561155339374" duration="9667000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14050000" />
+    <option name="totallyTimeSpent" value="35144000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-66" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.28895614" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2980333" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -249,50 +261,47 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>174</line>
+          <line>269</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>95</line>
+          <line>190</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/camera.py">
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="18" selection-start-line="7" selection-end-line="7" selection-end-column="67" />
+        <state relative-caret-position="323">
+          <caret line="359" column="23" selection-start-line="359" selection-start-column="23" selection-end-line="359" selection-end-column="23" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#60#69#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scrolling_area.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2401" />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/../OpenCV_3_KNN_Character_Recognition_Python-master/GenData.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/tkinterTable.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
+        <state relative-caret-position="3927">
           <caret line="231" column="17" selection-start-line="231" selection-start-column="6" selection-end-line="231" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/scrolling_area.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/camera.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3655">
-          <caret line="257" column="24" selection-start-line="257" selection-start-column="24" selection-end-line="257" selection-end-column="24" />
+        <state relative-caret-position="85">
+          <caret line="7" column="18" selection-start-line="7" selection-end-line="7" selection-end-column="67" />
           <folding>
-            <element signature="e#60#69#0" expanded="true" />
-            <element signature="e#1575#1974#0" />
-            <element signature="e#2534#2694#0" />
-            <element signature="e#2797#3000#0" />
-            <element signature="e#7318#9866#0" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>

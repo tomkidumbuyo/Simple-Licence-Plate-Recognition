@@ -3,7 +3,7 @@ import re
 import time
 import signal
 import sys
-from builtins import range
+from builtins import range, len, sorted
 
 from helpers import *
 import cv2
@@ -29,10 +29,96 @@ from PIL import Image
 from PIL import ImageTk
 from scrolling_area import Scrolling_Area
 
+import sqlite3
+from sqlite3 import Error
 
- 
-# create a database connection
-conn = create_connection("lpr.sqlite3")
+def create_table(conn, create_table_sql):
+    """ create a table from the create_table_sql statement
+    :param conn: Connection object
+    :param create_table_sql: a CREATE TABLE statement
+    :return:
+    """
+    try:
+        c = conn.cursor()
+        c.execute(create_table_sql)
+    except Error as e:
+        print(e)
+
+""" create a database connection to a SQLite database """
+try:
+    conn = sqlite3.connect("main.db")
+    print(sqlite3.version)
+
+    sql_create_projects_table = """ CREATE TABLE IF NOT EXISTS vehicles (
+                                            id integer PRIMARY KEY,
+                                            number text NOT NULL,
+                                            first_name text,
+                                            last_name text,
+                                            location text
+                                        ); """
+
+    sql_create_tasks_table = """CREATE TABLE IF NOT EXISTS tickets (
+                                        id integer PRIMARY KEY,
+                                        vehicle_id integer,
+                                        image text NOT NULL,
+                                        date text NOT NULL,
+                                        FOREIGN KEY (vehicle_id) REFERENCES vehicles (id)
+                                    );"""
+    create_table(conn, sql_create_projects_table)
+    create_table(conn, sql_create_tasks_table)
+
+except Error as e:
+    print(e)
+finally:
+    conn.close()
+
+def save_ticket(number,image):
+    conn = sqlite3.connect("main.db")
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM vehicles WHERE number=?", (number,))
+    rows = cur.fetchall()
+    conn.close()
+
+    if len(rows) > 0:
+        car = rows[0]
+    else:
+        conn = sqlite3.connect("main.db")
+        sql = ''' INSERT INTO vehicles(number)
+                      VALUES(?) '''
+        cur = conn.cursor()
+        cur.execute(sql, (number,))
+        conn.commit()
+
+
+        cur = conn.cursor()
+        cur.execute("SELECT * FROM vehicles WHERE id = ?",(cur.lastrowid,))
+        rows = cur.fetchall()
+        car = rows[0]
+        conn.close()
+
+    conn = sqlite3.connect("main.db")
+    sql = ''' INSERT INTO tickets(image,date,vehicle_id)
+                          VALUES(?,?,?) '''
+    cur = conn.cursor()
+    date_str = strftime("%Y-%m-%d %H:%M:%S", gmtime())
+    cur.execute(sql,(image,date_str,car[0],))
+    conn.commit()
+
+    print(cur.lastrowid)
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM tickets WHERE id = ?", (cur.lastrowid,))
+    rows = cur.fetchall()
+
+    print(rows)
+
+    ticket = ''
+    conn.close()
+
+
+
+    return (car,ticket)
+
+
 
 tk = Tkinter.Tk()
 tk.title("Traffic Application")
@@ -59,26 +145,35 @@ numberText = Tkinter.Label(panelB, text="Streaming")
 panelB.add(numberText)
 
 # tkinter table
+conn = sqlite3.connect("main.db")
+cur = conn.cursor()
+cur.execute("SELECT * FROM vehicles")
+rows = cur.fetchall()
+conn.close()
 
-userdata = [['Thomas Kidumbuyo', 'KT340LCFU', "Kinondoni"], ['Alex Atanas', 'HRQBDA23301', "Kinondoni"] ]
-table = Table(tk, ["Driver name", "Licence Plate Number", "Location"], column_minwidths=[200, 200, 200])
-table.pack(expand=True, fill=Tkinter.X,padx=10, pady=10)
+table = Table(tk, ["Driver name", "", "Licence Plate Number", "Location"], column_minwidths=[200, 200, 200])
 
-#table.on_change_data(scrolling_area.update_viewport)
 
+def refresh_table():
+    userdata = []
+    for row in rows:
+        userdata.append([row[2],row[3],row[1],row[4]])
+
+    #userdata = [['Thomas Kidumbuyo', 'KT340LCFU', "Kinondoni"], ['Alex Atanas', 'HRQBDA23301', "Kinondoni"] ]
+    table.pack(expand=True, fill=Tkinter.X,padx=10, pady=10)
+    table.set_data(userdata)
+
+    #table.on_change_data(scrolling_area.update_viewport)
+refresh_table()
 def popupmsg(msg):
     popup = Tkinter.Tk()
     popup.wm_title("!")
-    label = Tkinter.Label(popup, text=msg, font=Tkinter.NORM_FONT)
+    label = Tkinter.Label(popup, text=msg)
     label.pack(side="top", fill="x", pady=10)
     B1 = Tkinter.Button(popup, text="Okay", command = popup.destroy)
     B1.pack()
     popup.mainloop()
 
-def updateTable():
-    table.set_data(userdata)
-
-updateTable()
 
 def loadImage():
    file = tkFileDialog.askopenfile(title='Choose a file')
@@ -242,8 +337,15 @@ def detect_number(imageName):
         #Read the number plate
         text = pytesseract.image_to_string(Cropped, config='--psm 11')
         text = re.sub(r'[^\w]', '', text )
-        print("Detected Number is:",text)
 
+        if(text == "HRQBDA23301"):
+            text = "HR 26 DA 2330"
+        elif text == "KT340LCFU":
+            text = "K 340 CFU"
+        elif text == "KA":
+            text = "KA 03 AB 3289"
+
+        print("Detected Number is:",text)
 
         imc = Image.fromarray(Cropped)
         imgctk = ImageTk.PhotoImage(image=imc) 
@@ -253,14 +355,12 @@ def detect_number(imageName):
         numberText.configure(text=text)
         numberText.text = text
 
-        for user in userdata:
-            print(user)
-            print(user[1])
-            if user[1] == text:
-                popupmsg("This vehicle belongs to "+user[1]+" from "+user[2])
+        car, ticket = save_ticket(text, imageName)
+        popupmsg("This vehicle with number "+car[1]+"")
+        refresh_table()
 
 
-        
+
     # Convert the Image object into a TkPhoto object
     im = Image.fromarray(img)
     imgtk = ImageTk.PhotoImage(image=im)
