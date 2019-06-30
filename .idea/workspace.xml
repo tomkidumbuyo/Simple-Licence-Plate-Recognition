@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9f4972d3-b8f0-4ca3-94bd-2d51f06c944e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lpr.sqlite3" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_i_dilate.png" beforeDir="false" afterPath="$PROJECT_DIR$/output_i_dilate.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,10 +17,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="359" column="23" selection-start-line="359" selection-start-column="23" selection-end-line="359" selection-end-column="23" />
+            <state relative-caret-position="1845">
+              <caret line="448" lean-forward="true" selection-start-line="448" selection-end-line="448" />
               <folding>
                 <element signature="e#60#69#0" expanded="true" />
+                <element signature="e#8366#10294#0" />
               </folding>
             </state>
           </provider>
@@ -79,6 +80,9 @@
       <find>Table(</find>
       <find>columns</find>
       <find>Header_Cell</find>
+      <find>mainI</find>
+      <find>dete</find>
+      <find>mainImage</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -97,9 +101,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1320" />
-    <option name="y" value="48" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1382" />
     <option name="height" value="754" />
   </component>
@@ -109,7 +113,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -121,6 +124,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -195,21 +199,26 @@
       <workItem from="1561144711480" duration="1321000" />
       <workItem from="1561147873499" duration="6187000" />
       <workItem from="1561155339374" duration="9667000" />
+      <workItem from="1561191808901" duration="2751000" />
+      <workItem from="1561489136430" duration="595000" />
+      <workItem from="1561586229232" duration="116000" />
+      <workItem from="1561847879605" duration="3625000" />
+      <workItem from="1561891113885" duration="13984000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35144000" />
+    <option name="totallyTimeSpent" value="56215000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-66" width="1382" height="754" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2980333" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20121029" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32943144" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -219,7 +228,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32943144" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.20401338" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32943144" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -266,7 +275,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>190</line>
+          <line>194</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
@@ -275,10 +284,11 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="359" column="23" selection-start-line="359" selection-start-column="23" selection-end-line="359" selection-end-column="23" />
+        <state relative-caret-position="1845">
+          <caret line="448" lean-forward="true" selection-start-line="448" selection-end-line="448" />
           <folding>
             <element signature="e#60#69#0" expanded="true" />
+            <element signature="e#8366#10294#0" />
           </folding>
         </state>
       </provider>

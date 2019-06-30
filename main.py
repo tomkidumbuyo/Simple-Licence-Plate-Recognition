@@ -3,7 +3,7 @@ import re
 import time
 import signal
 import sys
-from builtins import range, len, sorted
+from builtins import range, len, sorted, str
 
 from helpers import *
 import cv2
@@ -88,13 +88,15 @@ def save_ticket(number,image):
         cur = conn.cursor()
         cur.execute(sql, (number,))
         conn.commit()
+        conn.close()
 
-
+        conn = sqlite3.connect("main.db")
         cur = conn.cursor()
         cur.execute("SELECT * FROM vehicles WHERE id = ?",(cur.lastrowid,))
         rows = cur.fetchall()
         car = rows[0]
         conn.close()
+
 
     conn = sqlite3.connect("main.db")
     sql = ''' INSERT INTO tickets(image,date,vehicle_id)
@@ -161,7 +163,9 @@ def refresh_table():
 
     #userdata = [['Thomas Kidumbuyo', 'KT340LCFU', "Kinondoni"], ['Alex Atanas', 'HRQBDA23301', "Kinondoni"] ]
     table.pack(expand=True, fill=Tkinter.X,padx=10, pady=10)
-    table.set_data(userdata)
+
+    if len(userdata)>0:
+        table.set_data(userdata)
 
     #table.on_change_data(scrolling_area.update_viewport)
 refresh_table()
@@ -190,17 +194,13 @@ capture = False
 
 def captureImage():
     global streaming,capture
-    if streaming == True:
-        streaming = False
-        capture = True
-        C.configure(text="Keep streaming")
-    else:
-        streaming = True
-        C.configure(text="Capture Image")
-        numberText.configure(text="Streaming")
-        numberText.text = "Streaming"
-        numberImage.configure(image=None)
-        numberImage.image = None
+    capture = True
+    # else:
+    #     streaming = True
+    #     numberText.configure(text="Streaming")
+    #     numberText.text = "Streaming"
+    #     numberImage.configure(image=None)
+    #     numberImage.image = None
 
 C = Tkinter.Button(panelB, text ="Capture Image", command = captureImage,height=5)
 panelB.add(C)
@@ -266,26 +266,34 @@ def prepare_switching():
     switch_road()
     
 prepare_switching()
+detect_number_button = False
+def detect_number():
+    global streaming,userdata,detect_number_button
+    detect_number_button = True
 
-def detect_number(imageName):
-    global streaming,userdata
-    streaming = False
-    img = cv2.imread(imageName,cv2.IMREAD_COLOR)
+licence_code = re.compile(r"^T\d{3}[A-Z]{3}$")
+livecam = cv2.VideoCapture(0)
 
-    img = cv2.resize(img, (620,480) )
+while True: # Run forever
 
-    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) #convert to grey scale
-    gray = cv2.bilateralFilter(gray, 11, 17, 17) #Blur to reduce noise
-    edged = cv2.Canny(gray, 30, 200) #Perform Edge detection
+    ret,frame = livecam.read()
+
+    img = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+
+
+    img = cv2.resize(img, (620, 480))
+
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)  # convert to grey scale
+    gray = cv2.bilateralFilter(gray, 11, 17, 17)  # Blur to reduce noise
+    edged = cv2.Canny(gray, 30, 200)  # Perform Edge detection
 
     # find contours in the edged image, keep only the largest
     # ones, and initialize our screen contour
     cnts = cv2.findContours(edged.copy(), cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
     cnts = imutils.grab_contours(cnts)
-    cnts = sorted(cnts, key = cv2.contourArea, reverse = True)[:10]
+    cnts = sorted(cnts, key=cv2.contourArea, reverse=True)[:10]
     screenCnt = None
 
-    # loop over our contours
     for c in cnts:
         # approximate the contour
         peri = cv2.arcLength(c, True)
@@ -295,102 +303,57 @@ def detect_number(imageName):
         # we can assume that we have found our screen
         if len(approx) == 4:
             screenCnt = approx
-            break
+            cv2.drawContours(img, [screenCnt], -1, (255, 0, 0), 1)
 
-    if screenCnt is None:
-        detected = 0
-        print("No contour detected")
-        numberText.configure(text="number not detected")
-        numberText.text = "number not detected"
-        numberImage.configure(image=None)
-        numberImage.image = None
-    else:
-        detected = 1
+            mask = np.zeros(gray.shape, np.uint8)
+            new_image = cv2.drawContours(mask, [screenCnt], 0, 255, -1, )
+            new_image = cv2.bitwise_and(img, img, mask=mask)
 
-        cv2.drawContours(img, [screenCnt], -1, (0, 255, 0), 3)
+            # Now crop
+            (x, y) = np.where(mask == 255)
+            (topx, topy) = (np.min(x), np.min(y))
+            (bottomx, bottomy) = (np.max(x), np.max(y))
+            Cropped = gray[topx:bottomx + 1, topy:bottomy + 1]
 
-        # Masking the part other than the number plate
-        mask = np.zeros(gray.shape,np.uint8)
-        new_image = cv2.drawContours(mask,[screenCnt],0,255,-1,)
-
-        new_image = cv2.bitwise_and(img,img,mask=mask)
-
-        # Now crop
-        (x, y) = np.where(mask == 255)
-        (topx, topy) = (np.min(x), np.min(y))
-        (bottomx, bottomy) = (np.max(x), np.max(y))
-        Cropped = gray[topx:bottomx+1, topy:bottomy+1]
-			
-        img2 = Cropped
-
-        ### After apply dilation using 3X3 kernal. The recognition results are improved.##
-        kernel = np.ones((2, 2), np.uint8)
-        img2 = cv2.dilate(img2, kernel, iterations=1)
-
-        cv2.imwrite("output_i_dilate.png", img2)
-        tessdata_dir_config = '--tessdata-dir "D:\Program Files\Tesseract-ocr\" --psm 10'
-    
-        result = pytesseract.image_to_string(Image.fromarray(img2), config='--psm 10')
-        result = re.sub(r'[^\w]', '', result)
-        print("Detected Result is:"+result)
-        
-        #Read the number plate
-        text = pytesseract.image_to_string(Cropped, config='--psm 11')
-        text = re.sub(r'[^\w]', '', text )
-
-        if(text == "HRQBDA23301"):
-            text = "HR 26 DA 2330"
-        elif text == "KT340LCFU":
-            text = "K 340 CFU"
-        elif text == "KA":
-            text = "KA 03 AB 3289"
-
-        print("Detected Number is:",text)
-
-        imc = Image.fromarray(Cropped)
-        imgctk = ImageTk.PhotoImage(image=imc) 
-        numberImage.configure(image=imgctk)
-        numberImage.image = imgctk
-        
-        numberText.configure(text=text)
-        numberText.text = text
-
-        car, ticket = save_ticket(text, imageName)
-        popupmsg("This vehicle with number "+car[1]+"")
-        refresh_table()
+            # Read the number plate
+            text = pytesseract.image_to_string(Cropped, config='--psm 11')
+            text = re.sub(r'[^\w]', '', text)
 
 
+            if licence_code.search(text):
+                color = (0, 255, 0)
+                if(detect_number_button == True):
+                    print("Detected Number is:", text)
+                    imc = Image.fromarray(Cropped)
+                    imgctk = ImageTk.PhotoImage(image=imc)
+                    numberImage.configure(image=imgctk)
+                    numberImage.image = imgctk
 
-    # Convert the Image object into a TkPhoto object
-    im = Image.fromarray(img)
-    imgtk = ImageTk.PhotoImage(image=im)
-    mainImage.configure(image=imgtk)
-    mainImage.image = imgtk
-    
-    if detected == 1:
-    	return result
-    else:
-    	return None
+                    numberText.configure(text=text)
+                    numberText.text = text
 
-livecam = cv2.VideoCapture(0)
+                    car, ticket = save_ticket(text, imageName)
+                    popupmsg("This vehicle with number " + car[1] + "")
+                    refresh_table()
+                    detect_number_button = False
+            else:
+                color = (0, 0, 255)
 
-while True: # Run forever
+            x, y, w, h = cv2.boundingRect(screenCnt)
+            cv2.rectangle(img, (x, y), (x + w, y + h), color , 2)
+            cv2.putText(img, text, (x, y - 5), cv2.FONT_HERSHEY_SIMPLEX, .5, (255, 255, 255), 2)
 
-    ret,frame = livecam.read()
-
-    if streaming :
-        image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-        image = Image.fromarray(image)
-        imagetk = ImageTk.PhotoImage(image=image)
-        mainImage.configure(image=imagetk)
-        mainImage.image = imagetk
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    img2 = Image.fromarray(img)
+    imagetk = ImageTk.PhotoImage(image=img2)
+    mainImage.configure(image=imagetk)
+    mainImage.image = imagetk
 
     if capture :
         capture = False
         imageName = r"files/" + strftime("%Y%m%d%H%M%S", gmtime()) + ".jpg"
-        cv2.imwrite(imageName, frame)  # save frame as JPEG file
-        print(imageName)
-        detect_number(imageName)
+        cv2.imwrite(imageName, img)  # save frame as JPEG file
+        detect_number()
 
 
     #if not interval_started :
