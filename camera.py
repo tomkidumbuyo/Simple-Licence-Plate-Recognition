@@ -4,7 +4,6 @@ from time import gmtime, strftime
 
 
 print("about to take a picture")
-
 imageName = "files/"+strftime("%Y-%m-%d,%H:%M:%S", gmtime())+".jpg"
 print(imageName)
 #setup the camera to close when not in use

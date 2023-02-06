@@ -1,7 +1,5 @@
 # Version: 0.22
-# Author: Miguel Martinez Lopez
-# Uncomment the next line to see my email
-# print("Author's email: ", "61706c69636163696f6e616d656469646140676d61696c2e636f6d".decode("hex"))
+# Author: tom_kidumbuyo
 
 try:
     from Tkinter import Canvas, Frame

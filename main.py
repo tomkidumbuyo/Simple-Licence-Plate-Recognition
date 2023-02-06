@@ -271,7 +271,7 @@ def detect_number():
     global streaming,userdata,detect_number_button
     detect_number_button = True
 
-licence_code = re.compile(r"^T\d{3}[A-Z]{3}$")
+licence_code = re.compile(r"^T\d{3}[A-Z]{3}$") # this is the format of Tanzanian licence plates. eg T123ABC
 livecam = cv2.VideoCapture(0)
 
 while True: # Run forever

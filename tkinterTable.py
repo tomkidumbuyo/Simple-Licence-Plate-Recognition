@@ -1,4 +1,4 @@
-# Author: Miguel Martinez Lopez
+# Author: tom_kidumbuyo
 # Version: 0.20
 
 try:
